@@ -20,6 +20,9 @@ export default {
     MiniMenu,
     ProjectsListMenu,
   },
+  mounted() {
+    this.$store.dispatch("loadProjects");
+  },
   computed: {
     ...mapState(["projects"]),
   },

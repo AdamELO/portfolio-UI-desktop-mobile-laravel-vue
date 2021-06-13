@@ -7,9 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $with = ["frameworks"];
+    protected $with = ["frameworks", "images"];
     public function frameworks()
     {
         return $this->belongsToMany(Framework::class, 'frameworks_projects');
+    }
+    public function images()
+    {
+        return  $this->hasMany(Image::class);
     }
 }

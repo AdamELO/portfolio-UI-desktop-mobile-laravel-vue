@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FrameworkSeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(FrameworkProjectSeeder::class);
+        $this->call(ImageSeeder::class);
     }
 }

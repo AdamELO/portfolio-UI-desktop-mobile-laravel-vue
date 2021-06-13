@@ -1,6 +1,6 @@
 <template>
   <MobileExplorer>
-    <v-row v-for="project in projects" :key="project.id">
+    <v-row v-for="project in projects" :key="project.id" style="margin-bottom: 40px">
       <v-col cols="12" class="hoverlay">
         <img
           width="100%"
@@ -10,7 +10,7 @@
         />
         <div class="overlay font-weight-bold">
           {{ project.projectName }}<br /><span class="ProjectSkillsColor">{{
-            project.framework[0]
+            project.frameworks[0]
           }}</span>
         </div>
       </v-col>
@@ -23,6 +23,9 @@ import MobileExplorer from "../components/MobileExplorer.vue";
 export default {
   components: {
     MobileExplorer,
+  },
+  mounted() {
+    this.$store.dispatch("loadProjects");
   },
   computed: {
     ...mapState(["projects"]),

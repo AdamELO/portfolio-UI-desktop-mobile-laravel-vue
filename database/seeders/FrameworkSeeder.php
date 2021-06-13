@@ -30,10 +30,10 @@ class FrameworkSeeder extends Seeder
             'name' => 'React Native',
         ] );
         DB::table( 'frameworks' )->insert( [
-            'name' => 'Html',
+            'name' => 'Html5',
         ] );
         DB::table( 'frameworks' )->insert( [
-            'name' => 'Css',
+            'name' => 'Css3',
         ] );
         DB::table( 'frameworks' )->insert( [
             'name' => 'JavaScript',

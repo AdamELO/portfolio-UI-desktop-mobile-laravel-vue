@@ -2,7 +2,14 @@
   <Explorer>
     <v-row v-for="project in projects" :key="project.id">
       <router-link
-        class="d-flex align-center justify-space-between hoverExplorerMenu explorer my-1"
+        class="
+          d-flex
+          align-center
+          justify-space-between
+          hoverExplorerMenu
+          explorer
+          my-1
+        "
         style="text-decoration: none; color: inherit"
         :to="{
           name: 'Projects-Show',
@@ -12,7 +19,10 @@
         <v-col cols="4">
           <img
             width="100%"
-            :src="require(`../assets/Projects/${project.images[0].src_alt}.png`).default"
+            :src="
+              require(`../assets/Projects/${project.images[0].src_alt}.png`)
+                .default
+            "
             :alt="project.images[0].src_alt"
           />
         </v-col>
@@ -22,7 +32,7 @@
         <v-col cols="5" class="d-flex justify-center align-center">
           <span
             class="mx-1"
-            v-for="skills in project.framework"
+            v-for="skills in project.frameworks"
             :key="skills"
             >{{ skills }}</span
           >
@@ -39,6 +49,9 @@ import Explorer from "../components/Explorer.vue";
 export default {
   components: {
     Explorer,
+  },
+  mounted() {
+    this.$store.dispatch("loadProjects");
   },
   computed: {
     ...mapState(["projects"]),

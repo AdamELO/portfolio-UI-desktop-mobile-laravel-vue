@@ -16,11 +16,33 @@ class ProjectSeeder extends Seeder
     {
         DB::table('projects')->insert([
             'projectName' => 'SpriteSheet Loaders',
-            'images' => 'rainbowloader'
         ]);
         DB::table('projects')->insert([
             'projectName' => 'Api Weather',
-            'images' => 'weather'
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => "Emporium Website",
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => 'The Real Wedding Backoffice',
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => 'Yahtzee Game',
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => 'MolenGeek Room Booking System',
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => 'The Labs Backoffice',
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => "Real time chat",
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => 'Restaurants Search',
+        ]);
+        DB::table('projects')->insert([
+            'projectName' => 'Portfolio',
         ]);
     }
 }

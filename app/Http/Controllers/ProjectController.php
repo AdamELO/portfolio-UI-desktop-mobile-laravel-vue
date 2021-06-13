@@ -14,15 +14,14 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
-        // dd($projects[1]->frameworks);
+        $projects = Project::all()->reverse();
+        foreach ($projects as $key => $value) {
+            for ($i=0; $i < count($projects[$key]['frameworks']) ; $i++) { 
+                $projects[$key]['frameworks'][$i] = $projects[$key]['frameworks'][$i]['name'];
+            }
+        };
 
-        // foreach ($projects as $key => $value) {
-
-        //     $projects[$key]['frameworks'] =;
-        // };
-
-        return response()->json($projects);
+        return $projects->toJson();
     }
 
     /**
