@@ -29,8 +29,8 @@
       >
         <v-text-field
           hide-details
-          prepend-icon="mdi-magnify mdi-rotate-90"
-          placeholder="Search Projects"
+          prepend-icon="mdi-google"
+          disabled
         ></v-text-field>
       </v-toolbar>
     </div>

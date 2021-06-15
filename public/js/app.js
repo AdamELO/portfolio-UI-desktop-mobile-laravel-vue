@@ -26437,7 +26437,7 @@ var render = function() {
                     attrs: {
                       "hide-details": "",
                       "prepend-icon": "mdi-magnify mdi-rotate-90",
-                      placeholder: "Search in projects"
+                      readonly: ""
                     }
                   })
                 ],
@@ -26726,8 +26726,8 @@ var render = function() {
               _c("v-text-field", {
                 attrs: {
                   "hide-details": "",
-                  "prepend-icon": "mdi-magnify mdi-rotate-90",
-                  placeholder: "Search Projects"
+                  "prepend-icon": "mdi-google",
+                  disabled: ""
                 }
               })
             ],
