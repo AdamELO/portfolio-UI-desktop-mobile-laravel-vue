@@ -2815,6 +2815,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _components_Explorer_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Explorer.vue */ "./resources/js/components/Explorer.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2866,6 +2883,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     Explorer: _components_Explorer_vue__WEBPACK_IMPORTED_MODULE_0__.default
@@ -2885,9 +2903,25 @@ __webpack_require__.r(__webpack_exports__);
         return !!v || "Subject is required";
       }],
       messageRules: [function (v) {
-        return !!v || "message is required";
-      }]
+        return !!v || "Message is required";
+      }],
+      fields: {},
+      success: false,
+      failed: false
     };
+  },
+  methods: {
+    submitForm: function submitForm() {
+      var _this = this;
+
+      return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/submit", this.fields).then(function (response) {
+        _this.success = true;
+        _this.failed = false;
+      })["catch"](function () {
+        _this.failed = true;
+        _this.success = false;
+      });
+    }
   }
 });
 
@@ -3628,7 +3662,6 @@ vue__WEBPACK_IMPORTED_MODULE_2__.default.use((vue_axios__WEBPACK_IMPORTED_MODULE
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://127.0.0.1:8000/api/dbprojects').then(function (response) {
         return response.data;
       }).then(function (projects) {
-        // console.log(projects);
         commit('SET_Projects', projects);
       });
     }
@@ -28176,6 +28209,22 @@ var render = function() {
             _c("h1", { staticClass: "primary--text" }, [_vm._v("Contact Form")])
           ]),
           _vm._v(" "),
+          _vm.success
+            ? _c(
+                "v-alert",
+                { attrs: { text: "", type: "success", dense: "" } },
+                [_vm._v("\n      Message successfully sent\n    ")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.failed
+            ? _c("v-alert", { attrs: { text: "", type: "error", dense: "" } }, [
+                _vm._v(
+                  "\n      Message has not been sent, an error occured please retry or send your\n      message through another way\n    "
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
           _c(
             "v-form",
             {
@@ -28204,9 +28253,17 @@ var render = function() {
                         [
                           _c("v-text-field", {
                             attrs: {
-                              rules: _vm.subjectRules,
                               label: "Subject",
+                              rules: _vm.subjectRules,
+                              name: "subject",
                               required: ""
+                            },
+                            model: {
+                              value: _vm.fields.subject,
+                              callback: function($$v) {
+                                _vm.$set(_vm.fields, "subject", $$v)
+                              },
+                              expression: "fields.subject"
                             }
                           })
                         ],
@@ -28223,7 +28280,15 @@ var render = function() {
                             attrs: {
                               rules: _vm.nameRules,
                               label: "Name",
+                              name: "name",
                               required: ""
+                            },
+                            model: {
+                              value: _vm.fields.name,
+                              callback: function($$v) {
+                                _vm.$set(_vm.fields, "name", $$v)
+                              },
+                              expression: "fields.name"
                             }
                           })
                         ],
@@ -28236,9 +28301,17 @@ var render = function() {
                         [
                           _c("v-text-field", {
                             attrs: {
-                              rules: _vm.emailRules,
                               label: "E-mail",
+                              rules: _vm.emailRules,
+                              name: "email",
                               required: ""
+                            },
+                            model: {
+                              value: _vm.fields.email,
+                              callback: function($$v) {
+                                _vm.$set(_vm.fields, "email", $$v)
+                              },
+                              expression: "fields.email"
                             }
                           })
                         ],
@@ -28252,8 +28325,16 @@ var render = function() {
                           _c("v-textarea", {
                             attrs: {
                               label: "Message",
+                              rules: _vm.messageRules,
                               required: "",
-                              rules: _vm.messageRules
+                              name: "message"
+                            },
+                            model: {
+                              value: _vm.fields.message,
+                              callback: function($$v) {
+                                _vm.$set(_vm.fields, "message", $$v)
+                              },
+                              expression: "fields.message"
                             }
                           })
                         ],
@@ -28270,9 +28351,14 @@ var render = function() {
                 "div",
                 { staticClass: "text-center" },
                 [
-                  _c("v-btn", { attrs: { color: "primary" } }, [
-                    _vm._v(" Send ")
-                  ])
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "primary" },
+                      on: { click: _vm.submitForm }
+                    },
+                    [_vm._v(" send ")]
+                  )
                 ],
                 1
               )
@@ -92565,15 +92651,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
 /* harmony import */ var _vuetify_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./vuetify/index.js */ "./resources/js/vuetify/index.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"); // import Vue from "vue";
-// import App from "./App.vue";
-// import vuetify from "./vuetify/index.js";
-// Vue.config.productionTip = false;
-// new Vue({
-//   vuetify,
-//   render: (h) => h(App),
-// }).$mount("#app");
-
+window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 
 

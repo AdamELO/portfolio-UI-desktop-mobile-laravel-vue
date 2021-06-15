@@ -1,18 +1,6 @@
 window.Vue = require('vue');
 window._ = require('lodash');
 
-// import Vue from "vue";
-// import App from "./App.vue";
-// import vuetify from "./vuetify/index.js";
-
-// Vue.config.productionTip = false;
-
-// new Vue({
-//   vuetify,
-//   render: (h) => h(App),
-// }).$mount("#app");
-
-
 import Vue from "vue";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";

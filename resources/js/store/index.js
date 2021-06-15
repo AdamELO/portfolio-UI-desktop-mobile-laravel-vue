@@ -51,7 +51,6 @@ export default new Vuex.Store({
         .get('http://127.0.0.1:8000/api/dbprojects')
         .then(response => response.data)
         .then(projects => {
-          // console.log(projects);
           commit('SET_Projects', projects)
         })
     }

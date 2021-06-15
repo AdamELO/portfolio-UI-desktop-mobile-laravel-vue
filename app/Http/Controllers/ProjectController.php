@@ -14,7 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all()->reverse();
+        $projects = Project::orderBy('id','desc')->get();
         foreach ($projects as $key => $value) {
             for ($i=0; $i < count($projects[$key]['frameworks']) ; $i++) { 
                 $projects[$key]['frameworks'][$i] = $projects[$key]['frameworks'][$i]['name'];
