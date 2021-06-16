@@ -2481,6 +2481,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     projects: Array
@@ -2501,6 +2504,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _components_WindowsMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/WindowsMenu */ "./resources/js/components/WindowsMenu.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -27788,7 +27805,53 @@ var render = function() {
       _vm._v(" "),
       _c("v-spacer"),
       _vm._v(" "),
-      _c("BaseIcon", { attrs: { name: "help" } }),
+      _c(
+        "v-tooltip",
+        {
+          attrs: { top: "" },
+          scopedSlots: _vm._u([
+            {
+              key: "activator",
+              fn: function(ref) {
+                var on = ref.on
+                var attrs = ref.attrs
+                return [
+                  _c(
+                    "div",
+                    _vm._g(
+                      _vm._b(
+                        { staticClass: "d-flex justify-center align-center" },
+                        "div",
+                        attrs,
+                        false
+                      ),
+                      on
+                    ),
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "`24px`",
+                          height: "`24px`",
+                          src: __webpack_require__(/*! ../assets/help.png */ "./resources/js/assets/help.png").default,
+                          alt: "help_icon"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              }
+            }
+          ])
+        },
+        [
+          _vm._v(" "),
+          _c("span", [
+            _vm._v(
+              "For an optimal experience you should activate full screen (f11)"
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c("BaseIcon", {
         attrs: {

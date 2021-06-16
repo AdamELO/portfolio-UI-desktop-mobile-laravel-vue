@@ -40,7 +40,21 @@
       <BaseIcon name="chrome" />
     </a>
     <v-spacer></v-spacer>
-    <BaseIcon name="help" />
+    <v-tooltip top>
+      <template v-slot:activator="{ on, attrs }">
+          <div class="d-flex justify-center align-center" v-bind="attrs"
+              v-on="on">
+            <img
+              width="`24px`"
+              height="`24px`"
+              :src="require(`../assets/help.png`).default"
+              alt="help_icon"
+            />
+          </div>
+      </template>
+      <span>For an optimal experience you should activate full screen (f11)</span>
+    </v-tooltip>
+
     <BaseIcon
       name="collapse_arrow"
       width="20"

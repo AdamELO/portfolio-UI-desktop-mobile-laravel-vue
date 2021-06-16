@@ -14,7 +14,10 @@
         <img
           class="pr-2"
           width="100%"
-          :src="require(`../assets/Projects/${project.images[0].src_alt}.png`).default"
+          :src="
+            require(`../assets/Projects/${project.images[0].src_alt}.png`)
+              .default
+          "
           :alt="project.images[0].src_alt"
         />
       </router-link>
