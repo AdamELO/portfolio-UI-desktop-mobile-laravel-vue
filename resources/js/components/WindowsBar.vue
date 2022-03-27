@@ -143,7 +143,7 @@ export default {
 
 <style scoped>
 .winBar {
-  background-color: rgb(0, 66, 117);
+  background-color: rgb(0, 63, 149);
   display: flex;
   height: 50px;
 }
@@ -176,7 +176,8 @@ export default {
   bottom: 50px;
   width: 40%;
   height: 80vh;
-  background-color: rgb(8, 97, 165);
+  background-color: rgb(6, 74, 170);
+  z-index: 9999;
 }
 .v-icon::before {
   background-color: transparent;

@@ -5,14 +5,15 @@
       hide-delimiter-background
       show-arrows-on-hover
       hide-delimiters
+      height="100%"
     >
       <v-carousel-item
         v-for="(projectImg, i) in $route.params.project.images"
         :key="i"
       >
         <img
-          height="100%"
-          width="100%"
+          height="100%!important"
+          width="100%!important"
           :src="require(`../assets/Projects/${projectImg.src_alt}.png`).default"
           :alt="projectImg.src_alt"
         />

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :class="shut ? 'off' : ''">
     <v-main>
       <transition
         v-if="$route.path.includes('/mobile')"
@@ -23,6 +23,11 @@ export default {
   name: "App",
   components: {
     WindowsBar,
+  },
+  computed: {
+    shut() {
+      return this.$store.state.shut;
+    },
   },
   methods: {
     afterEnter: () => {
@@ -137,5 +142,44 @@ body {
 .router-view-back-leave-to {
   z-index: 2;
   transform: translateX(100%);
+}
+
+/* shutdown */
+.off {
+  animation: shutdown 400ms linear;
+  animation-fill-mode: forwards;
+}
+.off:after {
+  animation: shutdown-opa 400ms linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shutdown {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  20% {
+    transform: scale3d(1, 1.6, 1);
+  }
+  50% {
+    transform: scale3d(1, 0.005, 1);
+  }
+  100% {
+    transform: scale3d(0, 0, 1);
+  }
+}
+
+@keyframes shutdown-opa {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>

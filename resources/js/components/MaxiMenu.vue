@@ -164,7 +164,7 @@
   color: white;
 }
 .MenuBg {
-  background: rgb(48, 121, 177);
+  background: rgb(9, 118, 201);
   border: 2px solid transparent;
 }
 .MenuBg:hover {

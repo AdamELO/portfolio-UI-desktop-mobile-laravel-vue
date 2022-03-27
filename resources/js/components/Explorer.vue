@@ -86,7 +86,7 @@
           </div>
         </router-link>
       </v-col>
-      <v-col cols="10" @scroll="handleScroll" class="px-5 scrollProjects">
+      <v-col cols="10" @scroll="handleScroll" height="100%!important" class="px-5 scrollProjects" :class="currentRouteName === 'Contact' || currentRouteName === 'Skills' ? 'd-flex justify-center align-center': ''">
         <slot></slot>
       </v-col>
       <v-row v-if="currentRouteName == 'Projects'">
@@ -111,6 +111,7 @@ export default {
   data() {
     return {
       scroll: false,
+      projectslist: this.$route.path == "/home/projects" ? true : false,
     };
   },
   methods: {
@@ -163,7 +164,9 @@ export default {
 }
 .scrollProjects {
   overflow-y: auto !important;
-  height: 70vh !important;
+  height: 70vh;
+  max-width: 100%;
+  max-height: 100%;
 }
 .explorer {
   border-bottom: solid 1px gainsboro;
@@ -210,6 +213,6 @@ export default {
   }
 }
 .closeBtn:hover {
-  background: red;
+  background: rgb(212, 35, 35);
 }
 </style>

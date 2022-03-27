@@ -19,6 +19,16 @@
     <v-icon color="white" class="py-3" dense> mdi-file-outline </v-icon>
     <v-icon color="white" class="py-3" dense> mdi-image-outline </v-icon>
     <v-icon color="white" class="py-3" dense> mdi-cog </v-icon>
-    <v-icon color="white" class="pt-3" dense> mdi-power </v-icon>
+    <v-icon v-on:click="shutdown()" color="white" class="pt-3" dense> mdi-power </v-icon>
   </v-col>
 </template>
+
+<script>
+export default {
+  methods: {
+    shutdown() {
+      this.$store.commit("shutdown");
+    },
+  },
+};
+</script>

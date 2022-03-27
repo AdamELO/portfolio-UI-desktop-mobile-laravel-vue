@@ -1872,6 +1872,11 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     WindowsBar: _components_WindowsBar_vue__WEBPACK_IMPORTED_MODULE_0__.default
   },
+  computed: {
+    shut: function shut() {
+      return this.$store.state.shut;
+    }
+  },
   methods: {
     afterEnter: function afterEnter() {
       window.scrollTo(0, 0);
@@ -2115,7 +2120,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      scroll: false
+      scroll: false,
+      projectslist: this.$route.path == "/home/projects" ? true : false
     };
   },
   methods: {
@@ -2279,6 +2285,52 @@ __webpack_require__.r(__webpack_exports__);
 
       this.currentTime = time;
       this.currentDate = dateTime;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/MiniMenu.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/MiniMenu.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    shutdown: function shutdown() {
+      this.$store.commit("shutdown");
     }
   }
 });
@@ -3192,6 +3244,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3640,6 +3693,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__.default.use((vue_axios__WEBPACK_IMPORTED_MODULE
       mode: "in-out"
     },
     isOpenWin10: false,
+    shut: false,
     projects: null
   },
   getters: {
@@ -3656,6 +3710,9 @@ vue__WEBPACK_IMPORTED_MODULE_2__.default.use((vue_axios__WEBPACK_IMPORTED_MODULE
     },
     toggleModalWin10: function toggleModalWin10(state) {
       state.isOpenWin10 = !state.isOpenWin10;
+    },
+    shutdown: function shutdown(state) {
+      state.shut = true;
     },
     setPageTransition: function setPageTransition(state, value) {
       if ("default" === value) {
@@ -3754,7 +3811,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nhtml,\nbody {\n  overflow-y: hidden !important;\n}\n@media (max-width: 992px) {\nhtml,\n  body {\n    overflow-y: scroll !important;\n}\n}\n/* // transitions// */\n/* slide up */\n.slide-up-enter {\n  transform: translateY(10px);\n  opacity: 0;\n}\n.slide-up-enter-active,\n.slide-up-leave {\n  transition: all 0.3s ease;\n}\n.slide-up-leave-to {\n  transform: translateY(-10px);\n  opacity: 0;\n}\n/* slide right */\n.slide-enter-active,\n.slide-leave-active {\n  transition: all 0.75s ease-out;\n}\n.slide-enter-to {\n  position: absolute;\n  right: 0;\n}\n.slide-enter-from {\n  position: absolute;\n  right: -100%;\n}\n.slide-leave-to {\n  position: absolute;\n  left: -100%;\n}\n.slide-leave-from {\n  position: absolute;\n  left: 0;\n}\n/* scrollbar */\n::-webkit-scrollbar {\n  width: 2px;\n}\n::-webkit-scrollbar-track {\n  background: transparent;\n}\n::-webkit-scrollbar-thumb {\n  background: transparent;\n}\n::-webkit-scrollbar-thumb:hover {\n  background: rgb(20, 20, 20);\n}\n\n/* test */\n.transition {\n  overflow: hidden;\n}\n.router-view-enter-active,\n.router-view-back-enter-active,\n.router-view-leave-active,\n.router-view-back-leave-active {\n  position: fixed;\n  width: 100%;\n  background: white;\n  min-height: 100vh;\n  top: 0;\n}\n\n/* // router view */\n.router-view-enter-active {\n  transition: transform 0.5s ease-in-out;\n  z-index: 2;\n  transform: translateX(100%);\n}\n.router-view-enter-to {\n  z-index: 2;\n  transform: translateX(0%);\n}\n.router-view-leave-active {\n  z-index: -1;\n}\n.router-view-leave-to {\n  z-index: -1;\n}\n/* // router view back */\n.router-view-back-leave-active {\n  transition: transform 0.5s ease-in-out;\n  z-index: 2;\n  transform: translateX(0%);\n}\n.router-view-back-leave-to {\n  z-index: 2;\n  transform: translateX(100%);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nhtml,\r\nbody {\r\n  overflow-y: hidden !important;\n}\n@media (max-width: 992px) {\nhtml,\r\n  body {\r\n    overflow-y: scroll !important;\n}\n}\r\n/* // transitions// */\r\n/* slide up */\n.slide-up-enter {\r\n  transform: translateY(10px);\r\n  opacity: 0;\n}\n.slide-up-enter-active,\r\n.slide-up-leave {\r\n  transition: all 0.3s ease;\n}\n.slide-up-leave-to {\r\n  transform: translateY(-10px);\r\n  opacity: 0;\n}\r\n/* slide right */\n.slide-enter-active,\r\n.slide-leave-active {\r\n  transition: all 0.75s ease-out;\n}\n.slide-enter-to {\r\n  position: absolute;\r\n  right: 0;\n}\n.slide-enter-from {\r\n  position: absolute;\r\n  right: -100%;\n}\n.slide-leave-to {\r\n  position: absolute;\r\n  left: -100%;\n}\n.slide-leave-from {\r\n  position: absolute;\r\n  left: 0;\n}\r\n/* scrollbar */\n::-webkit-scrollbar {\r\n  width: 2px;\n}\n::-webkit-scrollbar-track {\r\n  background: transparent;\n}\n::-webkit-scrollbar-thumb {\r\n  background: transparent;\n}\n::-webkit-scrollbar-thumb:hover {\r\n  background: rgb(20, 20, 20);\n}\r\n\r\n/* test */\n.transition {\r\n  overflow: hidden;\n}\n.router-view-enter-active,\r\n.router-view-back-enter-active,\r\n.router-view-leave-active,\r\n.router-view-back-leave-active {\r\n  position: fixed;\r\n  width: 100%;\r\n  background: white;\r\n  min-height: 100vh;\r\n  top: 0;\n}\r\n\r\n/* // router view */\n.router-view-enter-active {\r\n  transition: transform 0.5s ease-in-out;\r\n  z-index: 2;\r\n  transform: translateX(100%);\n}\n.router-view-enter-to {\r\n  z-index: 2;\r\n  transform: translateX(0%);\n}\n.router-view-leave-active {\r\n  z-index: -1;\n}\n.router-view-leave-to {\r\n  z-index: -1;\n}\r\n/* // router view back */\n.router-view-back-leave-active {\r\n  transition: transform 0.5s ease-in-out;\r\n  z-index: 2;\r\n  transform: translateX(0%);\n}\n.router-view-back-leave-to {\r\n  z-index: 2;\r\n  transform: translateX(100%);\n}\r\n\r\n/* shutdown */\n.off {\r\n  -webkit-animation: shutdown 400ms linear;\r\n          animation: shutdown 400ms linear;\r\n  -webkit-animation-fill-mode: forwards;\r\n          animation-fill-mode: forwards;\n}\n.off:after {\r\n  -webkit-animation: shutdown-opa 400ms linear;\r\n          animation: shutdown-opa 400ms linear;\r\n  -webkit-animation-fill-mode: forwards;\r\n          animation-fill-mode: forwards;\n}\n@-webkit-keyframes shutdown {\n0% {\r\n    transform: scale3d(1, 1, 1);\n}\n20% {\r\n    transform: scale3d(1, 1.6, 1);\n}\n50% {\r\n    transform: scale3d(1, 0.005, 1);\n}\n100% {\r\n    transform: scale3d(0, 0, 1);\n}\n}\n@keyframes shutdown {\n0% {\r\n    transform: scale3d(1, 1, 1);\n}\n20% {\r\n    transform: scale3d(1, 1.6, 1);\n}\n50% {\r\n    transform: scale3d(1, 0.005, 1);\n}\n100% {\r\n    transform: scale3d(0, 0, 1);\n}\n}\n@-webkit-keyframes shutdown-opa {\n0% {\r\n    opacity: 0;\n}\n50% {\r\n    opacity: 1;\n}\n100% {\r\n    opacity: 1;\n}\n}\n@keyframes shutdown-opa {\n0% {\r\n    opacity: 0;\n}\n50% {\r\n    opacity: 1;\n}\n100% {\r\n    opacity: 1;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3778,7 +3835,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.systemBar[data-v-b12b93ac] {\n  padding: 0 !important;\n  padding-left: 5px !important;\n}\n.closeBtn[data-v-b12b93ac] {\n  padding: 6px !important;\n  margin-right: 0 !important;\n}\n.explorerBorder[data-v-b12b93ac] {\n  border: solid 1px gainsboro !important;\n}\n.hoverExplorerMenu[data-v-b12b93ac] {\n  cursor: default;\n}\n.hoverExplorerMenu[data-v-b12b93ac]:hover {\n  background-color: rgba(82, 183, 238, 0.2);\n}\n.scrollProjects[data-v-b12b93ac] {\n  overflow-y: auto !important;\n  height: 70vh !important;\n}\n.explorer[data-v-b12b93ac] {\n  border-bottom: solid 1px gainsboro;\n  padding: 2px;\n}\n.scroll-icon__dot[data-v-b12b93ac] {\n  display: block;\n  position: absolute;\n  left: 50%;\n  background: rgb(18, 116, 162);\n  height: 0.5em;\n  width: 0.5em;\n  top: 0.6em;\n  margin-left: -0.25em;\n  border-radius: 50%;\n  transform-origin: top center;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  -webkit-animation: scrollProjects-data-v-b12b93ac 2s ease-out infinite;\n          animation: scrollProjects-data-v-b12b93ac 2s ease-out infinite;\n}\n.scroll-icon[data-v-b12b93ac] {\n  display: block;\n  position: relative;\n  height: 2.5em;\n  width: 1.25em;\n  border: 3px solid rgb(38, 145, 207);\n  border-radius: 1em;\n}\n@-webkit-keyframes scrollProjects-data-v-b12b93ac {\n0% {\n    transform: translateY(0);\n    opacity: 1;\n}\n25% {\n    opacity: 1;\n}\n75% {\n    transform: translateY(0.75em);\n    opacity: 0;\n}\n100% {\n    transform: translateY(0);\n    opacity: 0;\n}\n}\n@keyframes scrollProjects-data-v-b12b93ac {\n0% {\n    transform: translateY(0);\n    opacity: 1;\n}\n25% {\n    opacity: 1;\n}\n75% {\n    transform: translateY(0.75em);\n    opacity: 0;\n}\n100% {\n    transform: translateY(0);\n    opacity: 0;\n}\n}\n.closeBtn[data-v-b12b93ac]:hover {\n  background: red;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.systemBar[data-v-b12b93ac] {\r\n  padding: 0 !important;\r\n  padding-left: 5px !important;\n}\n.closeBtn[data-v-b12b93ac] {\r\n  padding: 6px !important;\r\n  margin-right: 0 !important;\n}\n.explorerBorder[data-v-b12b93ac] {\r\n  border: solid 1px gainsboro !important;\n}\n.hoverExplorerMenu[data-v-b12b93ac] {\r\n  cursor: default;\n}\n.hoverExplorerMenu[data-v-b12b93ac]:hover {\r\n  background-color: rgba(82, 183, 238, 0.2);\n}\n.scrollProjects[data-v-b12b93ac] {\r\n  overflow-y: auto !important;\r\n  height: 70vh;\r\n  max-width: 100%;\r\n  max-height: 100%;\n}\n.explorer[data-v-b12b93ac] {\r\n  border-bottom: solid 1px gainsboro;\r\n  padding: 2px;\n}\n.scroll-icon__dot[data-v-b12b93ac] {\r\n  display: block;\r\n  position: absolute;\r\n  left: 50%;\r\n  background: rgb(18, 116, 162);\r\n  height: 0.5em;\r\n  width: 0.5em;\r\n  top: 0.6em;\r\n  margin-left: -0.25em;\r\n  border-radius: 50%;\r\n  transform-origin: top center;\r\n  -webkit-backface-visibility: hidden;\r\n          backface-visibility: hidden;\r\n  -webkit-animation: scrollProjects-data-v-b12b93ac 2s ease-out infinite;\r\n          animation: scrollProjects-data-v-b12b93ac 2s ease-out infinite;\n}\n.scroll-icon[data-v-b12b93ac] {\r\n  display: block;\r\n  position: relative;\r\n  height: 2.5em;\r\n  width: 1.25em;\r\n  border: 3px solid rgb(38, 145, 207);\r\n  border-radius: 1em;\n}\n@-webkit-keyframes scrollProjects-data-v-b12b93ac {\n0% {\r\n    transform: translateY(0);\r\n    opacity: 1;\n}\n25% {\r\n    opacity: 1;\n}\n75% {\r\n    transform: translateY(0.75em);\r\n    opacity: 0;\n}\n100% {\r\n    transform: translateY(0);\r\n    opacity: 0;\n}\n}\n@keyframes scrollProjects-data-v-b12b93ac {\n0% {\r\n    transform: translateY(0);\r\n    opacity: 1;\n}\n25% {\r\n    opacity: 1;\n}\n75% {\r\n    transform: translateY(0.75em);\r\n    opacity: 0;\n}\n100% {\r\n    transform: translateY(0);\r\n    opacity: 0;\n}\n}\n.closeBtn[data-v-b12b93ac]:hover {\r\n  background: rgb(212, 35, 35);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3802,7 +3859,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fontWeather[data-v-945ebae8] {\n  font-size: 1.7rem;\n}\n.fontHour[data-v-945ebae8] {\n  font-size: 3rem;\n}\n.fontDate[data-v-945ebae8] {\n  font-size: 1.2rem;\n}\n.mobileMenu[data-v-945ebae8] {\n  position: absolute;\n  bottom: 60px;\n}\n.searchbarBorder[data-v-945ebae8] {\n  border-radius: 40px !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fontWeather[data-v-945ebae8] {\r\n  font-size: 1.7rem;\n}\n.fontHour[data-v-945ebae8] {\r\n  font-size: 3rem;\n}\n.fontDate[data-v-945ebae8] {\r\n  font-size: 1.2rem;\n}\n.mobileMenu[data-v-945ebae8] {\r\n  position: absolute;\r\n  bottom: 60px;\n}\n.searchbarBorder[data-v-945ebae8] {\r\n  border-radius: 40px !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3826,7 +3883,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.listMenu[data-v-04530c22] {\n  overflow-y: auto !important;\n  height: 100%;\n  font-size: 0.8rem;\n  color: white;\n}\n.MenuBg[data-v-04530c22] {\n  background: rgb(48, 121, 177);\n  border: 2px solid transparent;\n}\n.MenuBg[data-v-04530c22]:hover {\n  border: 2px solid rgba(141, 203, 236);\n}\n.skills[data-v-04530c22] {\n  font-size: 0.6rem;\n}\n.test[data-v-04530c22] {\n  display: flex;\n  justify-content: space-between !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.listMenu[data-v-04530c22] {\r\n  overflow-y: auto !important;\r\n  height: 100%;\r\n  font-size: 0.8rem;\r\n  color: white;\n}\n.MenuBg[data-v-04530c22] {\r\n  background: rgb(9, 118, 201);\r\n  border: 2px solid transparent;\n}\n.MenuBg[data-v-04530c22]:hover {\r\n  border: 2px solid rgba(141, 203, 236);\n}\n.skills[data-v-04530c22] {\r\n  font-size: 0.6rem;\n}\n.test[data-v-04530c22] {\r\n  display: flex;\r\n  justify-content: space-between !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3850,7 +3907,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bottom[data-v-a0b727fe] {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bottom[data-v-a0b727fe] {\r\n  position: fixed;\r\n  bottom: 0;\r\n  width: 100%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3874,7 +3931,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.mobileRouteExplorer[data-v-01838dac] {\n  font-size: 30px;\n  margin-left: 15px;\n}\n.borderBottom[data-v-01838dac] {\n  border-bottom: gainsboro 1px solid;\n}\n.overflow[data-v-01838dac] {\n  overflow-y: auto !important;\n  height: 100% !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.mobileRouteExplorer[data-v-01838dac] {\r\n  font-size: 30px;\r\n  margin-left: 15px;\n}\n.borderBottom[data-v-01838dac] {\r\n  border-bottom: gainsboro 1px solid;\n}\n.overflow[data-v-01838dac] {\r\n  overflow-y: auto !important;\r\n  height: 100% !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3898,7 +3955,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.menuHover[data-v-3182fca2]:hover {\n  background-color: rgba(255, 255, 255, 0.1);\n  cursor: default;\n}\n.listProjects[data-v-3182fca2] {\n  overflow-y: auto !important;\n  height: 100%;\n  font-size: 0.8rem;\n  color: #fff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.menuHover[data-v-3182fca2]:hover {\r\n  background-color: rgba(255, 255, 255, 0.1);\r\n  cursor: default;\n}\n.listProjects[data-v-3182fca2] {\r\n  overflow-y: auto !important;\r\n  height: 100%;\r\n  font-size: 0.8rem;\r\n  color: #fff;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3922,7 +3979,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.winBar[data-v-b37cd98a] {\n  background-color: rgb(0, 66, 117);\n  display: flex;\n  height: 50px;\n}\n.icons[data-v-b37cd98a] {\n  padding: 0 11.5px;\n}\n.right-icons[data-v-b37cd98a] {\n  padding: 0 5px;\n}\n.icons[data-v-b37cd98a]:hover,\n.right-icons[data-v-b37cd98a]:hover,\n.verticalBar[data-v-b37cd98a]:hover {\n  background-color: rgba(255, 255, 255, 0.1);\n}\n.win10[data-v-b37cd98a]:hover {\n  color: rgb(28, 146, 224) !important;\n  outline: none !important;\n}\n.date[data-v-b37cd98a] {\n  color: gainsboro;\n  text-align: center;\n  font-size: 0.75em;\n}\n.verticalBar[data-v-b37cd98a] {\n  border-left: solid 1px gray;\n  padding: 2.5px;\n}\n.modalwin10[data-v-b37cd98a] {\n  position: absolute;\n  bottom: 50px;\n  width: 40%;\n  height: 80vh;\n  background-color: rgb(8, 97, 165);\n}\n.v-icon[data-v-b37cd98a]::before {\n  background-color: transparent;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.winBar[data-v-b37cd98a] {\r\n  background-color: rgb(0, 63, 149);\r\n  display: flex;\r\n  height: 50px;\n}\n.icons[data-v-b37cd98a] {\r\n  padding: 0 11.5px;\n}\n.right-icons[data-v-b37cd98a] {\r\n  padding: 0 5px;\n}\n.icons[data-v-b37cd98a]:hover,\r\n.right-icons[data-v-b37cd98a]:hover,\r\n.verticalBar[data-v-b37cd98a]:hover {\r\n  background-color: rgba(255, 255, 255, 0.1);\n}\n.win10[data-v-b37cd98a]:hover {\r\n  color: rgb(28, 146, 224) !important;\r\n  outline: none !important;\n}\n.date[data-v-b37cd98a] {\r\n  color: gainsboro;\r\n  text-align: center;\r\n  font-size: 0.75em;\n}\n.verticalBar[data-v-b37cd98a] {\r\n  border-left: solid 1px gray;\r\n  padding: 2.5px;\n}\n.modalwin10[data-v-b37cd98a] {\r\n  position: absolute;\r\n  bottom: 50px;\r\n  width: 40%;\r\n  height: 80vh;\r\n  background-color: rgb(6, 74, 170);\r\n  z-index: 9999;\n}\n.v-icon[data-v-b37cd98a]::before {\r\n  background-color: transparent;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3946,7 +4003,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.menuHover[data-v-692b1c67]:hover {\n  background-color: rgba(255, 255, 255, 0.1);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.menuHover[data-v-692b1c67]:hover {\r\n  background-color: rgba(255, 255, 255, 0.1);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3970,7 +4027,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.flip-card[data-v-2995bb7e] {\n  width: 80%;\n  height: 80%;\n}\n.flip-card-inner[data-v-2995bb7e] {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  transition: transform 0.8s;\n  transform-style: preserve-3d;\n}\n.flip-card:hover .flip-card-inner[data-v-2995bb7e] {\n  transform: rotateY(180deg);\n}\n.flip-card-front[data-v-2995bb7e],\n.flip-card-back[data-v-2995bb7e] {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.flip-card-back[data-v-2995bb7e] {\n  background-image: linear-gradient(to right top, #004d7a, #0ea6b4);\n  color: white;\n  transform: rotateY(180deg);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.flip-card[data-v-2995bb7e] {\r\n  width: 80%;\r\n  height: 80%;\n}\n.flip-card-inner[data-v-2995bb7e] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 100%;\r\n  text-align: center;\r\n  transition: transform 0.8s;\r\n  transform-style: preserve-3d;\n}\n.flip-card:hover .flip-card-inner[data-v-2995bb7e] {\r\n  transform: rotateY(180deg);\n}\n.flip-card-front[data-v-2995bb7e],\r\n.flip-card-back[data-v-2995bb7e] {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  -webkit-backface-visibility: hidden;\r\n  backface-visibility: hidden;\n}\n.flip-card-back[data-v-2995bb7e] {\r\n  background-image: linear-gradient(to right top, #004d7a, #0ea6b4);\r\n  color: white;\r\n  transform: rotateY(180deg);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3994,7 +4051,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.circlecontact[data-v-1d91a851] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border: solid 3px white;\n  color: white !important;\n  background-color: #c42d40;\n  transform: rotate(0deg);\n  transition: color ease 2s, transform ease 2s, background-color ease 2s;\n}\n.circlecontact[data-v-1d91a851]:hover {\n  background-color: white;\n  color: #c42d40 !important;\n  transition: all ease 2s;\n  transform: rotate(360deg);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.circlecontact[data-v-1d91a851] {\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n  border: solid 3px white;\r\n  color: white !important;\r\n  background-color: #c42d40;\r\n  transform: rotate(0deg);\r\n  transition: color ease 2s, transform ease 2s, background-color ease 2s;\n}\n.circlecontact[data-v-1d91a851]:hover {\r\n  background-color: white;\r\n  color: #c42d40 !important;\r\n  transition: all ease 2s;\r\n  transform: rotate(360deg);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4024,7 +4081,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_windows_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bg-win10 {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100%;\n  width: 100%;\n}\n.desktopIconFont {\n  color: white;\n  font-family: Segoe UI;\n  text-shadow: 2px 1px black;\n  font-weight: 200;\n  text-align: center;\n  cursor: default;\n}\n.desktop_hov:hover,\n.desktop_hov:focus {\n  background-color: rgba(82, 183, 238, 0.4);\n  outline: 1px solid rgba(141, 203, 236);\n}\n.height {\n  height: 100% !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bg-win10 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  height: 100%;\r\n  width: 100%;\n}\n.desktopIconFont {\r\n  color: white;\r\n  font-family: Segoe UI;\r\n  text-shadow: 2px 1px black;\r\n  font-weight: 200;\r\n  text-align: center;\r\n  cursor: default;\n}\n.desktop_hov:hover,\r\n.desktop_hov:focus {\r\n  background-color: rgba(82, 183, 238, 0.4);\r\n  outline: 1px solid rgba(141, 203, 236);\n}\n.height {\r\n  height: 100% !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4054,7 +4111,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_wallpaper2_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.wallpaper[data-v-68b206cc] {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  /* Wallpaper2 By Mado El Khouly */\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100%;\n  width: 100%;\n}\n.fontWeather[data-v-68b206cc] {\n  font-size: 1.7rem;\n}\n.fontHour[data-v-68b206cc] {\n  font-size: 3rem;\n}\n.fontDate[data-v-68b206cc] {\n  font-size: 1.2rem;\n}\n.mobileMenu[data-v-68b206cc] {\n  position: absolute;\n  bottom: 60px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.wallpaper[data-v-68b206cc] {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  /* Wallpaper2 By Mado El Khouly */\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  height: 100%;\r\n  width: 100%;\n}\n.fontWeather[data-v-68b206cc] {\r\n  font-size: 1.7rem;\n}\n.fontHour[data-v-68b206cc] {\r\n  font-size: 3rem;\n}\n.fontDate[data-v-68b206cc] {\r\n  font-size: 1.2rem;\n}\n.mobileMenu[data-v-68b206cc] {\r\n  position: absolute;\r\n  bottom: 60px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4078,7 +4135,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.hoverExplorerMenu[data-v-f7b760ce] {\n  cursor: default;\n}\n.hoverExplorerMenu[data-v-f7b760ce]:hover {\n  background-color: rgba(82, 183, 238, 0.2);\n}\n.explorer[data-v-f7b760ce] {\n  border-bottom: solid 1px gainsboro;\n  padding: 2px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.hoverExplorerMenu[data-v-f7b760ce] {\r\n  cursor: default;\n}\n.hoverExplorerMenu[data-v-f7b760ce]:hover {\r\n  background-color: rgba(82, 183, 238, 0.2);\n}\n.explorer[data-v-f7b760ce] {\r\n  border-bottom: solid 1px gainsboro;\r\n  padding: 2px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4102,7 +4159,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.imageProjects[data-v-343fd2ca] {\n  opacity: 1;\n  display: block;\n  width: 100%;\n  height: auto;\n  transition: 0.5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.overlay[data-v-343fd2ca] {\n  transition: 0.5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}\n.hoverlay[data-v-343fd2ca] {\n  position: relative;\n}\n.hoverlay:hover .imageProjects[data-v-343fd2ca] {\n  opacity: 0.3;\n  cursor: zoom-in;\n}\n.hoverlay:hover .overlay[data-v-343fd2ca] {\n  cursor: zoom-in;\n  opacity: 1;\n}\n.ProjectSkillsColor[data-v-343fd2ca] {\n  color: rgb(196, 45, 64);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.imageProjects[data-v-343fd2ca] {\r\n  opacity: 1;\r\n  display: block;\r\n  width: 100%;\r\n  height: auto;\r\n  transition: 0.5s ease;\r\n  -webkit-backface-visibility: hidden;\r\n          backface-visibility: hidden;\n}\n.overlay[data-v-343fd2ca] {\r\n  transition: 0.5s ease;\r\n  opacity: 0;\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  text-align: center;\n}\n.hoverlay[data-v-343fd2ca] {\r\n  position: relative;\n}\n.hoverlay:hover .imageProjects[data-v-343fd2ca] {\r\n  opacity: 0.3;\r\n  cursor: zoom-in;\n}\n.hoverlay:hover .overlay[data-v-343fd2ca] {\r\n  cursor: zoom-in;\r\n  opacity: 1;\n}\n.ProjectSkillsColor[data-v-343fd2ca] {\r\n  color: rgb(196, 45, 64);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4126,7 +4183,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.text-elipsis[data-v-4c05ca23] {\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.text-elipsis[data-v-4c05ca23] {\r\n  text-overflow: ellipsis;\r\n  white-space: nowrap;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24369,15 +24426,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _MiniMenu_vue_vue_type_template_id_1a1da4c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MiniMenu.vue?vue&type=template&id=1a1da4c1& */ "./resources/js/components/MiniMenu.vue?vue&type=template&id=1a1da4c1&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _MiniMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MiniMenu.vue?vue&type=script&lang=js& */ "./resources/js/components/MiniMenu.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _MiniMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _MiniMenu_vue_vue_type_template_id_1a1da4c1___WEBPACK_IMPORTED_MODULE_0__.render,
   _MiniMenu_vue_vue_type_template_id_1a1da4c1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -25172,6 +25231,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomeMobile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/HomeMobile.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/MiniMenu.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/MiniMenu.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MiniMenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/MiniMenu.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -26146,6 +26221,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-app",
+    { class: _vm.shut ? "off" : "" },
     [
       _c(
         "v-main",
@@ -26616,7 +26692,12 @@ var render = function() {
             "v-col",
             {
               staticClass: "px-5 scrollProjects",
-              attrs: { cols: "10" },
+              class:
+                _vm.currentRouteName === "Contact" ||
+                _vm.currentRouteName === "Skills"
+                  ? "d-flex justify-center align-center"
+                  : "",
+              attrs: { cols: "10", height: "100%!important" },
               on: { scroll: _vm.handleScroll }
             },
             [_vm._t("default")],
@@ -27454,7 +27535,15 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-icon",
-        { staticClass: "pt-3", attrs: { color: "white", dense: "" } },
+        {
+          staticClass: "pt-3",
+          attrs: { color: "white", dense: "" },
+          on: {
+            click: function($event) {
+              return _vm.shutdown()
+            }
+          }
+        },
         [_vm._v(" mdi-power ")]
       )
     ],
@@ -28141,7 +28230,7 @@ var render = function() {
                         ),
                         _c("br"),
                         _vm._v(
-                          "\n            I'm currently looking for a job/internship "
+                          "\n            I'm currently looking for a job "
                         ),
                         _c("br"),
                         _vm._v(
@@ -28228,7 +28317,7 @@ var render = function() {
           _vm._v(" "),
           _c("v-card-text", { staticClass: "black--text" }, [
             _vm._v(
-              "\n      Hello 🙋 !!! My name is Adam and I'm a FullStack Web Developer.\n      I'm currently looking for a job/internship So if you're looking for a\n      nice, curious and determined fellow Don't hesitate to contact me !!! Why\n      do I think I am the one you need ? Well, I don't fear bugs or problems,\n      I'm always looking to learn new things and understand how things work.\n    "
+              "\n      Hello 🙋 !!! My name is Adam and I'm a FullStack Web Developer.\n      I'm currently looking for a job So if you're looking for a\n      nice, curious and determined fellow Don't hesitate to contact me !!! Why\n      do I think I am the one you need ? Well, I don't fear bugs or problems,\n      I'm always looking to learn new things and understand how things work.\n    "
             )
           ])
         ],
@@ -28807,15 +28896,16 @@ var render = function() {
             cycle: "",
             "hide-delimiter-background": "",
             "show-arrows-on-hover": "",
-            "hide-delimiters": ""
+            "hide-delimiters": "",
+            height: "100%"
           }
         },
         _vm._l(_vm.$route.params.project.images, function(projectImg, i) {
           return _c("v-carousel-item", { key: i }, [
             _c("img", {
               attrs: {
-                height: "100%",
-                width: "100%",
+                height: "100%!important",
+                width: "100%!important",
                 src: __webpack_require__("./resources/js/assets/Projects sync recursive ^\\.\\/.*\\.png$")("./" +
                   projectImg.src_alt +
                   ".png").default,

@@ -53,7 +53,7 @@
             <div class="text--primary font-weight-bold">
               Hello &#128587; !!! My name is Adam and I'm a FullStack Web
               Developer <br />
-              I'm currently looking for a job/internship <br />
+              I'm currently looking for a job <br />
               So if you're looking for a nice, curious and determined fellow,<br />
               Don't hesitate to contact me !!! <br />
               Why do I think I am the one you need ? Well, I don't fear bugs or
