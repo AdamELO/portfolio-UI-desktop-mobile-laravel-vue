@@ -5,6 +5,8 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta http-equiv="Content-Security-Policy" >
+        <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
         <title>Adam Portfolio</title>
     </head>

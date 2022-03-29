@@ -14,7 +14,7 @@
             </v-img>
           </div>
           <div class="flip-card-back">
-            <h1>El Omari Adam <v-spacer></v-spacer>Web Developer</h1>
+            <div class="text-h5">El Omari Adam <v-spacer></v-spacer>Web Developer</div>
             <p class="ma-3">
               <v-row>
                 <v-col cols="12"
@@ -43,7 +43,6 @@
                 </v-col>
               </v-row>
             </p>
-            <h2 class="mt-5">Don't hesitate to contact me !!!</h2>
           </div>
         </v-card>
       </v-col>

@@ -2824,7 +2824,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3733,7 +3732,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__.default.use((vue_axios__WEBPACK_IMPORTED_MODULE
   actions: {
     loadProjects: function loadProjects(_ref) {
       var commit = _ref.commit;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://127.0.0.1:8000/api/dbprojects').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/dbprojects').then(function (response) {
         return response.data;
       }).then(function (projects) {
         commit('SET_Projects', projects);
@@ -28110,7 +28109,8 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "flip-card-back" }, [
                   _c(
-                    "h1",
+                    "div",
+                    { staticClass: "text-h5" },
                     [
                       _vm._v("El Omari Adam "),
                       _c("v-spacer"),
@@ -28199,11 +28199,7 @@ var render = function() {
                       )
                     ],
                     1
-                  ),
-                  _vm._v(" "),
-                  _c("h2", { staticClass: "mt-5" }, [
-                    _vm._v("Don't hesitate to contact me !!!")
-                  ])
+                  )
                 ])
               ])
             ],

@@ -52,7 +52,7 @@ export default new Vuex.Store({
   actions: {
     loadProjects({ commit }) {
       axios
-        .get('http://127.0.0.1:8000/api/dbprojects')
+        .get('/api/dbprojects')
         .then(response => response.data)
         .then(projects => {
           commit('SET_Projects', projects)
