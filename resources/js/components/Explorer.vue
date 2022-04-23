@@ -164,6 +164,7 @@ export default {
 }
 .scrollProjects {
   overflow-y: auto !important;
+  scrollbar-width: none;
   height: 70vh;
   max-width: 100%;
   max-height: 100%;

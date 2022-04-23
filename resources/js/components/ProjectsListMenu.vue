@@ -40,6 +40,7 @@ export default {
 }
 .listProjects {
   overflow-y: auto !important;
+  scrollbar-width: none;
   height: 100%;
   font-size: 0.8rem;
   color: #fff;

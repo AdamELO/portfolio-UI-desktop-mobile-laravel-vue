@@ -159,6 +159,7 @@
 <style scoped>
 .listMenu {
   overflow-y: auto !important;
+  scrollbar-width: none;
   height: 100%;
   font-size: 0.8rem;
   color: white;
