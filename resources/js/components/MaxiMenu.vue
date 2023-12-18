@@ -76,6 +76,32 @@
         <v-row justify="space-between" class="pa-2">
           <v-col class="d-flex align-center flex-column MenuBg" cols="3">
             <v-img
+              :src="require('../assets/Skills/angular.png').default"
+              alt="`html-icon`"
+              width="50px"
+            ></v-img>
+            <span class="skills">Angular</span>
+          </v-col>
+          <v-col class="d-flex align-center flex-column MenuBg" cols="3">
+            <v-img
+              :src="require('../assets/Skills/csharp.png').default"
+              alt="`html-icon`"
+              width="50px"
+            ></v-img>
+            <span class="skills">C#</span>
+          </v-col>
+          <v-col class="d-flex align-center flex-column MenuBg" cols="3">
+            <v-img
+              :src="require('../assets/Skills/asp.png').default"
+              alt="`html-icon`"
+              width="50px"
+            ></v-img>
+            <span class="skills">Asp.Net</span>
+          </v-col>
+        </v-row>
+        <v-row justify="space-between" class="pa-2">
+          <v-col class="d-flex align-center flex-column MenuBg" cols="3">
+            <v-img
               :src="require('../assets/Skills/bootstrap.png').default"
               alt="`html-icon`"
               width="50px"

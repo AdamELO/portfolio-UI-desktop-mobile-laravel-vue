@@ -59,5 +59,14 @@ class FrameworkSeeder extends Seeder
         DB::table( 'frameworks' )->insert( [
             'name' => 'Figma',
         ] );
+        DB::table( 'frameworks' )->insert( [
+            'name' => 'Angular',
+        ] );
+        DB::table( 'frameworks' )->insert( [
+            'name' => 'C#',
+        ] );
+        DB::table( 'frameworks' )->insert( [
+            'name' => 'Asp.Net',
+        ] );
     }
 }

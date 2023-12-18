@@ -3394,6 +3394,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3415,6 +3445,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _components_MobileExplorer_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MobileExplorer.vue */ "./resources/js/components/MobileExplorer.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4864,6 +4924,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/assets/Skills/angular.png":
+/*!************************************************!*\
+  !*** ./resources/js/assets/Skills/angular.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/angular.png?17435fd0823ba81a99b91fac436d6a89");
+
+/***/ }),
+
+/***/ "./resources/js/assets/Skills/asp.png":
+/*!********************************************!*\
+  !*** ./resources/js/assets/Skills/asp.png ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/asp.png?01f7eca4f6c5f12c9716c0928e845e37");
+
+/***/ }),
+
 /***/ "./resources/js/assets/Skills/bootstrap.png":
 /*!**************************************************!*\
   !*** ./resources/js/assets/Skills/bootstrap.png ***!
@@ -4876,6 +4966,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/bootstrap.png?1322de2e74487b0e35ae99e4a1794b20");
+
+/***/ }),
+
+/***/ "./resources/js/assets/Skills/csharp.png":
+/*!***********************************************!*\
+  !*** ./resources/js/assets/Skills/csharp.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/csharp.png?5a45dfbe7dbab84acddf43c75112c572");
 
 /***/ }),
 
@@ -27251,6 +27356,73 @@ var render = function() {
                     [
                       _c("v-img", {
                         attrs: {
+                          src: __webpack_require__(/*! ../assets/Skills/angular.png */ "./resources/js/assets/Skills/angular.png").default,
+                          alt: "`html-icon`",
+                          width: "50px"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "skills" }, [_vm._v("Angular")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    {
+                      staticClass: "d-flex align-center flex-column MenuBg",
+                      attrs: { cols: "3" }
+                    },
+                    [
+                      _c("v-img", {
+                        attrs: {
+                          src: __webpack_require__(/*! ../assets/Skills/csharp.png */ "./resources/js/assets/Skills/csharp.png").default,
+                          alt: "`html-icon`",
+                          width: "50px"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "skills" }, [_vm._v("C#")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    {
+                      staticClass: "d-flex align-center flex-column MenuBg",
+                      attrs: { cols: "3" }
+                    },
+                    [
+                      _c("v-img", {
+                        attrs: {
+                          src: __webpack_require__(/*! ../assets/Skills/asp.png */ "./resources/js/assets/Skills/asp.png").default,
+                          alt: "`html-icon`",
+                          width: "50px"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "skills" }, [_vm._v("Asp.Net")])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-row",
+                { staticClass: "pa-2", attrs: { justify: "space-between" } },
+                [
+                  _c(
+                    "v-col",
+                    {
+                      staticClass: "d-flex align-center flex-column MenuBg",
+                      attrs: { cols: "3" }
+                    },
+                    [
+                      _c("v-img", {
+                        attrs: {
                           src: __webpack_require__(/*! ../assets/Skills/bootstrap.png */ "./resources/js/assets/Skills/bootstrap.png").default,
                           alt: "`html-icon`",
                           width: "50px"
@@ -28351,7 +28523,7 @@ var render = function() {
     [
       _c(
         "v-card",
-        { attrs: { elevation: "2" } },
+        { attrs: { elevation: "2", height: "100%!important" } },
         [
           _c("v-card-title", { staticClass: "ml-2 d-flex justify-center" }, [
             _c("h1", { staticClass: "primary--text" }, [_vm._v("Contact Form")])
@@ -28944,6 +29116,7 @@ var render = function() {
     [
       _c(
         "v-container",
+        { attrs: { height: "100%!important" } },
         [
           _c(
             "v-row",
@@ -29226,6 +29399,45 @@ var render = function() {
                 "v-col",
                 { attrs: { cols: "3" } },
                 [
+                  _c("v-card", { attrs: { color: "#1CACEA", dark: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex flex-column align-center justify-center"
+                      },
+                      [
+                        _c(
+                          "v-avatar",
+                          {
+                            staticClass: "mt-3",
+                            attrs: { size: "80", tile: "" }
+                          },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src: __webpack_require__(/*! ../assets/Skills/angular.png */ "./resources/js/assets/Skills/angular.png").default
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-card-title", { staticClass: "text-elipsis" }, [
+                          _vm._v("Angular")
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "3" } },
+                [
                   _c("v-card", { attrs: { color: "#c48a7c", dark: "" } }, [
                     _c(
                       "div",
@@ -29330,6 +29542,84 @@ var render = function() {
                         _vm._v(" "),
                         _c("v-card-title", { staticClass: "text-h5" }, [
                           _vm._v("React Native")
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "3" } },
+                [
+                  _c("v-card", { attrs: { color: "#008080", dark: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex flex-column align-center justify-center"
+                      },
+                      [
+                        _c(
+                          "v-avatar",
+                          {
+                            staticClass: "mt-3",
+                            attrs: { size: "80", tile: "" }
+                          },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src: __webpack_require__(/*! ../assets/Skills/csharp.png */ "./resources/js/assets/Skills/csharp.png").default
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-card-title", { staticClass: "text-elipsis" }, [
+                          _vm._v("C#")
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "3" } },
+                [
+                  _c("v-card", { attrs: { color: "#68217A", dark: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex flex-column align-center justify-center"
+                      },
+                      [
+                        _c(
+                          "v-avatar",
+                          {
+                            staticClass: "mt-3",
+                            attrs: { size: "80", tile: "" }
+                          },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src: __webpack_require__(/*! ../assets/Skills/asp.png */ "./resources/js/assets/Skills/asp.png").default
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-card-title", { staticClass: "text-elipsis" }, [
+                          _vm._v("Asp.Net")
                         ])
                       ],
                       1
@@ -29737,6 +30027,45 @@ var render = function() {
                 "v-col",
                 { attrs: { cols: "6" } },
                 [
+                  _c("v-card", { attrs: { color: "#1CACEA", dark: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex flex-column align-center justify-center"
+                      },
+                      [
+                        _c(
+                          "v-avatar",
+                          {
+                            staticClass: "mt-3",
+                            attrs: { size: "80", tile: "" }
+                          },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src: __webpack_require__(/*! ../assets/Skills/angular.png */ "./resources/js/assets/Skills/angular.png").default
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-card-title", { staticClass: "text-elipsis" }, [
+                          _vm._v("Angular")
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "6" } },
+                [
                   _c("v-card", { attrs: { color: "#c48a7c", dark: "" } }, [
                     _c(
                       "div",
@@ -29841,6 +30170,84 @@ var render = function() {
                         _vm._v(" "),
                         _c("v-card-title", { staticClass: "text-elipsis" }, [
                           _vm._v("React Native")
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "6" } },
+                [
+                  _c("v-card", { attrs: { color: "#008080", dark: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex flex-column align-center justify-center"
+                      },
+                      [
+                        _c(
+                          "v-avatar",
+                          {
+                            staticClass: "mt-3",
+                            attrs: { size: "80", tile: "" }
+                          },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src: __webpack_require__(/*! ../assets/Skills/csharp.png */ "./resources/js/assets/Skills/csharp.png").default
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-card-title", { staticClass: "text-elipsis" }, [
+                          _vm._v("C#")
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "6" } },
+                [
+                  _c("v-card", { attrs: { color: "#68217A", dark: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex flex-column align-center justify-center"
+                      },
+                      [
+                        _c(
+                          "v-avatar",
+                          {
+                            staticClass: "mt-3",
+                            attrs: { size: "80", tile: "" }
+                          },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src: __webpack_require__(/*! ../assets/Skills/asp.png */ "./resources/js/assets/Skills/asp.png").default
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-card-title", { staticClass: "text-elipsis" }, [
+                          _vm._v("Asp.Net")
                         ])
                       ],
                       1
@@ -92590,7 +92997,10 @@ var map = {
 	"./Projects/yahtzeeEnd.png": "./resources/js/assets/Projects/yahtzeeEnd.png",
 	"./Projects/yahtzeeStart.png": "./resources/js/assets/Projects/yahtzeeStart.png",
 	"./Projects/yathzeeRoll.png": "./resources/js/assets/Projects/yathzeeRoll.png",
+	"./Skills/angular.png": "./resources/js/assets/Skills/angular.png",
+	"./Skills/asp.png": "./resources/js/assets/Skills/asp.png",
 	"./Skills/bootstrap.png": "./resources/js/assets/Skills/bootstrap.png",
+	"./Skills/csharp.png": "./resources/js/assets/Skills/csharp.png",
 	"./Skills/css3.png": "./resources/js/assets/Skills/css3.png",
 	"./Skills/html5.png": "./resources/js/assets/Skills/html5.png",
 	"./Skills/javascript.png": "./resources/js/assets/Skills/javascript.png",

@@ -1,6 +1,6 @@
 <template>
   <Explorer>
-    <v-container>
+    <v-container height="100%!important">
       <v-row dense>
         <v-col cols="3">
           <v-card color="#1f88ff" dark>
@@ -73,6 +73,16 @@
           </v-card>
         </v-col>
         <v-col cols="3">
+          <v-card color="#1CACEA" dark>
+            <div class="d-flex flex-column align-center justify-center">
+              <v-avatar class="mt-3" size="80" tile>
+                <v-img :src="require('../assets/Skills/angular.png').default"></v-img>
+              </v-avatar>
+              <v-card-title class="text-elipsis">Angular</v-card-title>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col cols="3">
           <v-card color="#c48a7c" dark>
             <div class="d-flex flex-column align-center justify-center">
               <v-avatar class="mt-3" size="80" tile>
@@ -99,6 +109,26 @@
                 <v-img :src="require('../assets/Skills/react_native_64px.png').default"></v-img>
               </v-avatar>
               <v-card-title class="text-h5">React Native</v-card-title>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col cols="3">
+          <v-card color="#008080" dark>
+            <div class="d-flex flex-column align-center justify-center">
+              <v-avatar class="mt-3" size="80" tile>
+                <v-img :src="require('../assets/Skills/csharp.png').default"></v-img>
+              </v-avatar>
+              <v-card-title class="text-elipsis">C#</v-card-title>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col cols="3">
+          <v-card color="#68217A" dark>
+            <div class="d-flex flex-column align-center justify-center">
+              <v-avatar class="mt-3" size="80" tile>
+                <v-img :src="require('../assets/Skills/asp.png').default"></v-img>
+              </v-avatar>
+              <v-card-title class="text-elipsis">Asp.Net</v-card-title>
             </div>
           </v-card>
         </v-col>

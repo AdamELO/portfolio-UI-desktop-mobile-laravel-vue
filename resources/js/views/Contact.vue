@@ -1,6 +1,6 @@
 <template>
   <Explorer>
-    <v-card elevation="2">
+    <v-card elevation="2" height="100%!important">
       <v-card-title class="ml-2 d-flex justify-center"
         ><h1 class="primary--text">Contact Form</h1></v-card-title
       >
