@@ -44,5 +44,8 @@ class ProjectSeeder extends Seeder
         DB::table('projects')->insert([
             'projectName' => 'Portfolio',
         ]);
+        DB::table('projects')->insert([
+            'projectName' => 'Solar-System',
+        ]);
     }
 }

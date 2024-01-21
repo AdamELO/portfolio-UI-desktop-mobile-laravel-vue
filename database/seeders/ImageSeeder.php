@@ -164,5 +164,15 @@ class ImageSeeder extends Seeder
             'src_alt' => 'portfolio',
             'project_id' => '10'
         ]);
+        DB::table('images')->insert([
+            'src' => '../assets/projects/solarSystem.png',
+            'src_alt' => 'solar-system',
+            'project_id' => '11'
+        ]);
+        DB::table('images')->insert([
+            'src' => '../assets/projects/planetDetails.png',
+            'src_alt' => 'solar-system',
+            'project_id' => '11'
+        ]);
     }
 }

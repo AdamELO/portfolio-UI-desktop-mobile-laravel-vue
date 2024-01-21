@@ -114,5 +114,9 @@ class FrameworkProjectSeeder extends Seeder
             'project_id' => 10,
             'framework_id' => 8,
         ]);
+        DB::table('frameworks_projects')->insert([
+            'project_id' => 11,
+            'framework_id' => 16,
+        ]);
     }
 }
